@@ -21,6 +21,28 @@ void obliczanie_stozka() {
 }
 
 void obliczanie_ostroslupa() {
+	double a, b, H;
+	cout << "ostroslup prosty o podstawie prostokata";
+	cout << " podaj a, b, H: ";
+	cin >> a >> b >> H;
+	if (a < 0 || b < 0 || H < 0) {
+		cout << "podales h lub r mniejsze od 0";
+	}
+	else {
+		double Pp = a * b;
+		double v = Pp * H;
+		double d = sqrt(a * a + b * b);// przekatna podstawy
+		double h = sqrt(d / 2 + H);
+		double Pt1 = a / 2 * h;
+		double Pt2 = b / 2 * h;
+		double Pc = Pp + 2 * Pt1 + 2 * Pt2;
+		cout << fixed << setprecision(2) << " v = " << v << ", p = " << Pc;
+	}
+
+
+
+
+
 
 }
 
